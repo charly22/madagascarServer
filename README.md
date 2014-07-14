@@ -1,4 +1,2 @@
-madagascarServer
+madagascar-server
 ================
-
-Madagascar implementation

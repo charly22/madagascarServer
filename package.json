@@ -1,0 +1,14 @@
+{
+  "name": "madagascar-server",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": { },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Olapic/madagascarServer.git"
+  },
+  "dependencies": {
+    "madagascar": "~0.1.7"
+  },
+  "license": "MIT"
+}
