@@ -8,6 +8,9 @@
     "url": "git://github.com/Olapic/madagascarServer.git"
   },
   "dependencies": {
+    "express": "~4.6.1",
+    "body-parser": "~1.4.3",
+    "forever": "~0.11.1",
     "madagascar": "~0.1.7"
   },
   "license": "MIT"
