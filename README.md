@@ -4,11 +4,10 @@
 
 ```sh
 npm install
-npm install forever -g
 ```
 
-## Run it with forever
+## Run it
 
 ```sh
-forever start index.js -w
+npm start
 ```
