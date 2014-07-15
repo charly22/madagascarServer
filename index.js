@@ -18,6 +18,7 @@ conf = {
 
 gate = madagascar({
   domains: {
+    baseUrl: 'https://api.olapic.com/',
     restrictTo: [
       'api.olapic.com',
       'rest.photorank.me',
