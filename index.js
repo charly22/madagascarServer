@@ -6,21 +6,33 @@ var express = require('express'),
 
 app.use(bodyParser.json());
 
+app.use(error);
+function error(err, req, res, next) {
+  console.error(err.stack);
+  res.send(400, {error: 'Bad request'});
+}
+
+conf = {
+  port: process.env.MADAGASCAR_PORT || 8081
+};
+
 gate = madagascar({
   domains: {
-    baseUrl: 'https://api.olapic.com/',
     restrictTo: [
       'api.olapic.com',
-      'rest.photorank.me'
+      'rest.photorank.me',
     ],
-    batchMaxSize: 50
+    batchMaxSize: 30
+  },
+  defaultHeaders: {
+    Accept: 'application/json'
   }
 });
 
 app.post('/', function(req, res){
   gate(req.body, function(responses) {
-    res.send(responses);
+    res.send((res.err ? 200 : 500), responses);
   });
 });
 
-app.listen(8081);
+app.listen(conf.port);
