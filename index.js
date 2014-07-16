@@ -32,7 +32,7 @@ gate = madagascar({
 
 app.post('/', function(req, res){
   gate(req.body, function(responses) {
-    res.send((res.err ? 200 : 500), responses);
+    res.send((res.err ? 500 : 200), responses);
   });
 });
 
