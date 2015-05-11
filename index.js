@@ -22,12 +22,20 @@ gate = madagascar({
     restrictTo: [
       'api.olapic.com',
       'rest.photorank.me',
+      'rest.local.photorank.me',
     ],
-    batchMaxSize: 30
   },
+  batchMaxSize: 50,
   defaultHeaders: {
     Accept: 'application/json'
   }
+});
+
+app.all('*', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
 });
 
 app.post('/', function(req, res){
