@@ -6,8 +6,8 @@
 npm install
 ```
 
-## Run it
+## Run it on a desired port
 
 ```sh
-npm start
+MADAGASCAR_PORT=3400 npm start
 ```
