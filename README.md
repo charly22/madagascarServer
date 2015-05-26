@@ -3,7 +3,7 @@
 ##Installation
 
 ```sh
-npm install
+npm run buld
 ```
 
 ## Run it on a desired port
