@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "build": "npm install"
+    "prepare": "npm install"
   },
   "repository": {
     "type": "git",
