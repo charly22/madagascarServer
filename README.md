@@ -3,7 +3,7 @@
 ##Installation
 
 ```sh
-npm run build
+npm run prepare
 ```
 
 ## Run it on a desired port
